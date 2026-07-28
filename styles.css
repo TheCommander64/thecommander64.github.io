@@ -2,14 +2,14 @@ body {
   background: #1B1B25;
   color: #fff;
   font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
 }
 
 .construction-banner {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
   background: #d43a3a;
   color: #fff;
   text-align: center;
@@ -17,10 +17,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-body {
-  padding-top: 48px;
+  box-sizing: border-box;
 }
 
 .separator {
