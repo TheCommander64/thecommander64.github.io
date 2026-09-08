@@ -48,7 +48,7 @@ img {
 }
 
 .container {
-  width: min(1100px, calc(100% - 32px));
+  width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
   padding: 56px 0 80px;
 }
@@ -56,6 +56,22 @@ img {
 .title {
   margin-top: 30px;
   margin-bottom: 32px;
+  text-align: center;
+}
+
+.profile-photo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.25);
 }
 
 .eyebrow {
@@ -65,6 +81,7 @@ img {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   font-weight: 700;
+  text-align: center;
 }
 
 .title h1,
@@ -79,23 +96,27 @@ img {
   font-size: clamp(2.5rem, 7vw, 5rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .title h2 {
   margin: 14px 0 18px;
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.0rem, 2.5vw, 1.6rem);
   color: var(--muted);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .title a {
   color: var(--accent-strong);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   transition: color 0.2s ease, opacity 0.2s ease;
+  display: inline-block;
+  text-align: center;
 }
 
 .title a:hover {
@@ -110,7 +131,8 @@ img {
 }
 
 .education-section,
-.employment-section {
+.employment-section,
+.arts-section {
   margin-top: 40px;
 }
 
@@ -138,12 +160,13 @@ img {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px;
 }
 
 .education-card,
-.experience-card {
+.experience-card,
+.arts-card {
   background: linear-gradient(180deg, rgba(24,33,45,0.98), rgba(17,22,31,0.98));
   border: 1px solid var(--panel-border);
   border-radius: 18px;
@@ -170,7 +193,8 @@ img {
 }
 
 .education-card h4,
-.experience-card h4 {
+.experience-card h4,
+.arts-card h4 {
   margin: 0 0 12px;
   font-size: 1.15rem;
   color: var(--accent-strong);
@@ -197,6 +221,43 @@ img {
 .employment-list {
   display: grid;
   gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.arts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.arts-card {
+  overflow: hidden;
+  padding: 0;
+  min-height: 480px;
+}
+
+.arts-image {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.arts-card.zoom-out .arts-image {
+  transform: scale(.7);
+  transform-origin: center;
+}
+
+.arts-card-body {
+  padding: 20px 22px 24px;
+}
+
+.arts-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .experience-header {
