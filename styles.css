@@ -47,6 +47,18 @@ img {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
+.copyright-banner {
+  width: 100%;
+  background: #171e28;
+  border-top: 1px solid rgba(173, 190, 211, 0.16);
+  color: #8292a6;
+  padding: 18px 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.12);
+}
+
 .container {
   width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
